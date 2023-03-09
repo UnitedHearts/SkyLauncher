@@ -31,8 +31,8 @@ public static class Api
     static class Sender
     {
         static HttpClient _client = new HttpClient(); 
-        static string BaseUrl = "https://localhost:7109";
-        //static string BaseUrl = "https://lonewald.ru";
+        //static string BaseUrl = "https://localhost:7109";
+        static string BaseUrl = "https://lonewald.ru";
         public static async Task<Response<T>> Send<T>(string requestBody, string endPoint, HttpMethod method) where T : class
         {
             var request = new HttpRequestMessage(method, BaseUrl + endPoint);
