@@ -10,8 +10,7 @@ namespace SkyLauncher.Pages
         public LoginFrame()
         {
             InitializeComponent();
-            SetDtaggable();
-            DoubleBuffered = true;
+            SetDraggable();
             SetBtnAnim();
 
             panelManager = new PanelManager(new List<Panel>() { MainPanel, RegisterPanel, LoginPanel });
@@ -100,10 +99,11 @@ namespace SkyLauncher.Pages
             }
         }
 
-        void SetDtaggable()
+        void SetDraggable()
         {
             SetStyle(ControlStyles.ResizeRedraw, true);
             Header.MouseDown += OnMouseDown;
+            DoubleBuffered = true;
         }
         #endregion
 
