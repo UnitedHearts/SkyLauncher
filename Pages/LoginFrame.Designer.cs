@@ -371,7 +371,7 @@
             // 
             // LogOutBtn
             // 
-            LogOutBtn.BackgroundImage = Properties.Resources.logout;
+            LogOutBtn.BackgroundImage = Properties.Resources.logout_step_1;
             LogOutBtn.BackgroundImageLayout = ImageLayout.Zoom;
             LogOutBtn.Cursor = Cursors.Hand;
             LogOutBtn.Location = new Point(0, 387);
@@ -411,9 +411,9 @@
             ClientSize = new Size(960, 540);
             Controls.Add(SideImage);
             Controls.Add(Header);
-            Controls.Add(LoginPanel);
             Controls.Add(MainPanel);
             Controls.Add(RegisterPanel);
+            Controls.Add(LoginPanel);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Name = "LoginFrame";

@@ -93,9 +93,19 @@ namespace SkyLauncher.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logout {
+        internal static System.Drawing.Bitmap logout_step_1 {
             get {
-                object obj = ResourceManager.GetObject("logout", resourceCulture);
+                object obj = ResourceManager.GetObject("logout_step_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_step_2 {
+            get {
+                object obj = ResourceManager.GetObject("logout_step_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

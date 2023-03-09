@@ -12,7 +12,7 @@ namespace SkyLauncher.Pages
             InitializeComponent();
             SetDtaggable();
             DoubleBuffered = true;
-            SetExitBtnAnim();
+            SetBtnAnim();
 
             panelManager = new PanelManager(new List<Panel>() { MainPanel, RegisterPanel, LoginPanel });
 
@@ -29,10 +29,13 @@ namespace SkyLauncher.Pages
             InitializePanels(frame);
         }
 
-        void SetExitBtnAnim()
+        void SetBtnAnim()
         {
             this.ExitButton.MouseEnter += (s, e) => { this.ExitButton.BackgroundImage = Resources.exit_active; };
             this.ExitButton.MouseLeave += (s, e) => { this.ExitButton.BackgroundImage = Resources.exit_inactive; };
+
+            this.LogOutBtn.MouseEnter += (s, e) => { this.LogOutBtn.BackgroundImage = Resources.logout_step_2; };
+            this.LogOutBtn.MouseLeave += (s, e) => { this.LogOutBtn.BackgroundImage = Resources.logout_step_1; };
         }
         void InitializePanels(int frame)
         {
@@ -68,10 +71,10 @@ namespace SkyLauncher.Pages
 
         async Task<int> TryAutoLogin()
         {
-            if (!AutoLoginer.FileExist) 
+            if (!AutoLoginer.FileExist)
                 return 2;
             var login = await AutoLoginer.GetAutoLogin();
-            if(!login.IsValid)
+            if (!login.IsValid)
                 return 1;
             var result = await Api.LogIn(login);
             if (!result.IsValid)
