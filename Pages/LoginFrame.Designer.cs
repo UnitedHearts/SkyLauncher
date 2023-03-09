@@ -28,218 +28,407 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label label2;
-            System.Windows.Forms.Label label1;
-            System.Windows.Forms.Label label4;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginFrame));
-            this.Header = new System.Windows.Forms.Panel();
-            this.ExitButton = new System.Windows.Forms.PictureBox();
-            this.LoginPanel = new System.Windows.Forms.Panel();
-            this.RegisterPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.LoginButton = new System.Windows.Forms.Button();
-            this.PasswordTextBox = new System.Windows.Forms.TextBox();
-            this.LoginTextBox = new System.Windows.Forms.TextBox();
-            this.SideImage = new System.Windows.Forms.Panel();
-            label2 = new System.Windows.Forms.Label();
-            label1 = new System.Windows.Forms.Label();
-            label4 = new System.Windows.Forms.Label();
-            this.Header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ExitButton)).BeginInit();
-            this.LoginPanel.SuspendLayout();
-            this.RegisterPanel.SuspendLayout();
-            this.SuspendLayout();
+            Label label2;
+            Label label1;
+            Label label4;
+            Label label7;
+            UserNameLabel = new Label();
+            Header = new Panel();
+            ExitButton = new PictureBox();
+            LoginPanel = new Panel();
+            LoginRedirectToRegisterLabel = new Label();
+            loginErrorMsgLabel = new Label();
+            LoginButton = new Button();
+            LoginPasswordTextBox = new TextBox();
+            LoginEmailTextBox = new TextBox();
+            RegisterPanel = new Panel();
+            RegisterRedirectTologinLabel = new Label();
+            RegisterPasswordConfirmTextBox = new TextBox();
+            RegisterNameTextBox = new TextBox();
+            RegisterErrorMsgLabel = new Label();
+            RegisterBtn = new Button();
+            RegisterPasswordTextBox = new TextBox();
+            RegisterEmailTextBox = new TextBox();
+            MainPanel = new Panel();
+            PlayBtn = new Button();
+            LogOutBtn = new PictureBox();
+            SideImage = new Panel();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            label4 = new Label();
+            label7 = new Label();
+            Header.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ExitButton).BeginInit();
+            LoginPanel.SuspendLayout();
+            RegisterPanel.SuspendLayout();
+            MainPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)LogOutBtn).BeginInit();
+            SideImage.SuspendLayout();
+            SuspendLayout();
             // 
             // label2
             // 
-            label2.BackColor = System.Drawing.Color.Transparent;
-            label2.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label2.ForeColor = System.Drawing.Color.Black;
-            label2.Location = new System.Drawing.Point(50, 73);
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Arial Black", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(50, 73);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(500, 60);
+            label2.Size = new Size(500, 60);
             label2.TabIndex = 2;
             label2.Text = "Представьтесь, пожалуйста";
-            label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             label2.UseCompatibleTextRendering = true;
             // 
             // label1
             // 
-            label1.BackColor = System.Drawing.Color.Transparent;
-            label1.Font = new System.Drawing.Font("Arial Black", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label1.ForeColor = System.Drawing.Color.Black;
-            label1.Location = new System.Drawing.Point(50, 25);
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Arial Black", 30F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(50, 25);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(500, 60);
+            label1.Size = new Size(500, 60);
             label1.TabIndex = 1;
             label1.Text = "Добро пожаловать!";
-            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             label1.UseCompatibleTextRendering = true;
             // 
             // label4
             // 
-            label4.BackColor = System.Drawing.Color.Transparent;
-            label4.Font = new System.Drawing.Font("Arial Black", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label4.ForeColor = System.Drawing.Color.Black;
-            label4.Location = new System.Drawing.Point(50, 25);
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Arial Black", 26F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(50, 25);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(500, 60);
+            label4.Size = new Size(500, 60);
             label4.TabIndex = 1;
             label4.Text = "Пройдите регистрацию";
-            label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label4.TextAlign = ContentAlignment.MiddleCenter;
             label4.UseCompatibleTextRendering = true;
+            // 
+            // label7
+            // 
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Arial Black", 26F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(50, 25);
+            label7.Name = "label7";
+            label7.Size = new Size(500, 60);
+            label7.TabIndex = 1;
+            label7.Text = "С возвращением!";
+            label7.TextAlign = ContentAlignment.MiddleCenter;
+            label7.UseCompatibleTextRendering = true;
+            // 
+            // UserNameLabel
+            // 
+            UserNameLabel.BackColor = Color.Transparent;
+            UserNameLabel.Font = new Font("Arial Black", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            UserNameLabel.ForeColor = Color.Black;
+            UserNameLabel.Location = new Point(10, 100);
+            UserNameLabel.Name = "UserNameLabel";
+            UserNameLabel.Size = new Size(350, 60);
+            UserNameLabel.TabIndex = 3;
+            UserNameLabel.Text = "UserName";
+            UserNameLabel.TextAlign = ContentAlignment.MiddleLeft;
+            UserNameLabel.UseCompatibleTextRendering = true;
             // 
             // Header
             // 
-            this.Header.BackColor = System.Drawing.Color.Transparent;
-            this.Header.Controls.Add(this.ExitButton);
-            this.Header.Location = new System.Drawing.Point(-1, 0);
-            this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(1200, 60);
-            this.Header.TabIndex = 0;
+            Header.BackColor = Color.Transparent;
+            Header.Controls.Add(ExitButton);
+            Header.Location = new Point(-1, 0);
+            Header.Name = "Header";
+            Header.Size = new Size(1200, 60);
+            Header.TabIndex = 0;
             // 
             // ExitButton
             // 
-            this.ExitButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ExitButton.BackgroundImage")));
-            this.ExitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ExitButton.Location = new System.Drawing.Point(13, 12);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(45, 45);
-            this.ExitButton.TabIndex = 0;
-            this.ExitButton.TabStop = false;
-            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            ExitButton.BackgroundImage = Properties.Resources.exit_inactive;
+            ExitButton.BackgroundImageLayout = ImageLayout.Zoom;
+            ExitButton.Cursor = Cursors.Hand;
+            ExitButton.Location = new Point(13, 12);
+            ExitButton.Name = "ExitButton";
+            ExitButton.Size = new Size(45, 45);
+            ExitButton.TabIndex = 0;
+            ExitButton.TabStop = false;
+            ExitButton.Click += ExitButton_Click;
             // 
             // LoginPanel
             // 
-            this.LoginPanel.BackColor = System.Drawing.Color.Transparent;
-            this.LoginPanel.Controls.Add(this.LoginButton);
-            this.LoginPanel.Controls.Add(this.PasswordTextBox);
-            this.LoginPanel.Controls.Add(label1);
-            this.LoginPanel.Controls.Add(this.LoginTextBox);
-            this.LoginPanel.Controls.Add(label2);
-            this.LoginPanel.Location = new System.Drawing.Point(15, 70);
-            this.LoginPanel.Name = "LoginPanel";
-            this.LoginPanel.Size = new System.Drawing.Size(600, 450);
-            this.LoginPanel.TabIndex = 1;
-            this.LoginPanel.Visible = false;
-            this.LoginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.LoginPanel_Paint);
+            LoginPanel.BackColor = Color.Transparent;
+            LoginPanel.Controls.Add(LoginRedirectToRegisterLabel);
+            LoginPanel.Controls.Add(loginErrorMsgLabel);
+            LoginPanel.Controls.Add(LoginButton);
+            LoginPanel.Controls.Add(LoginPasswordTextBox);
+            LoginPanel.Controls.Add(label1);
+            LoginPanel.Controls.Add(LoginEmailTextBox);
+            LoginPanel.Controls.Add(label2);
+            LoginPanel.Location = new Point(15, 70);
+            LoginPanel.Name = "LoginPanel";
+            LoginPanel.Size = new Size(600, 450);
+            LoginPanel.TabIndex = 3;
+            LoginPanel.Visible = false;
             // 
-            // RegisterPanel
+            // LoginRedirectToRegisterLabel
             // 
-            this.RegisterPanel.BackColor = System.Drawing.Color.Transparent;
-            this.RegisterPanel.Controls.Add(this.button1);
-            this.RegisterPanel.Controls.Add(this.textBox1);
-            this.RegisterPanel.Controls.Add(label4);
-            this.RegisterPanel.Controls.Add(this.textBox2);
-            this.RegisterPanel.Location = new System.Drawing.Point(15, 70);
-            this.RegisterPanel.Name = "RegisterPanel";
-            this.RegisterPanel.Size = new System.Drawing.Size(600, 450);
-            this.RegisterPanel.TabIndex = 4;
+            LoginRedirectToRegisterLabel.BackColor = Color.Transparent;
+            LoginRedirectToRegisterLabel.Cursor = Cursors.Hand;
+            LoginRedirectToRegisterLabel.Font = new Font("Arial Black", 10F, FontStyle.Underline, GraphicsUnit.Point);
+            LoginRedirectToRegisterLabel.ForeColor = Color.PowderBlue;
+            LoginRedirectToRegisterLabel.Location = new Point(125, 430);
+            LoginRedirectToRegisterLabel.Name = "LoginRedirectToRegisterLabel";
+            LoginRedirectToRegisterLabel.Size = new Size(350, 20);
+            LoginRedirectToRegisterLabel.TabIndex = 9;
+            LoginRedirectToRegisterLabel.Text = "Еще нет аккаунта? Зарегистрироваться";
+            LoginRedirectToRegisterLabel.TextAlign = ContentAlignment.MiddleCenter;
+            LoginRedirectToRegisterLabel.UseCompatibleTextRendering = true;
+            LoginRedirectToRegisterLabel.Click += LoginRedirectToRegisterLabel_Click;
             // 
-            // button1
+            // loginErrorMsgLabel
             // 
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(200, 340);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 50);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Узнаешь?";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(125, 255);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(350, 34);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(125, 200);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(350, 34);
-            this.textBox2.TabIndex = 0;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            loginErrorMsgLabel.BackColor = Color.Transparent;
+            loginErrorMsgLabel.Font = new Font("Arial Black", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            loginErrorMsgLabel.ForeColor = Color.Red;
+            loginErrorMsgLabel.Location = new Point(50, 395);
+            loginErrorMsgLabel.Name = "loginErrorMsgLabel";
+            loginErrorMsgLabel.Size = new Size(500, 40);
+            loginErrorMsgLabel.TabIndex = 4;
+            loginErrorMsgLabel.Tag = "ErrorMsgLabel";
+            loginErrorMsgLabel.Text = "ErrorMsgLabel";
+            loginErrorMsgLabel.TextAlign = ContentAlignment.MiddleCenter;
+            loginErrorMsgLabel.UseCompatibleTextRendering = true;
             // 
             // LoginButton
             // 
-            this.LoginButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.LoginButton.BackColor = System.Drawing.Color.Transparent;
-            this.LoginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoginButton.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LoginButton.Location = new System.Drawing.Point(200, 340);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(200, 50);
-            this.LoginButton.TabIndex = 2;
-            this.LoginButton.Text = "Узнаешь?";
-            this.LoginButton.UseVisualStyleBackColor = false;
+            LoginButton.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            LoginButton.BackColor = Color.Transparent;
+            LoginButton.BackgroundImageLayout = ImageLayout.Zoom;
+            LoginButton.Cursor = Cursors.Hand;
+            LoginButton.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            LoginButton.Location = new Point(200, 340);
+            LoginButton.Name = "LoginButton";
+            LoginButton.Size = new Size(200, 50);
+            LoginButton.TabIndex = 3;
+            LoginButton.TabStop = false;
+            LoginButton.Text = "Узнаешь?";
+            LoginButton.UseVisualStyleBackColor = false;
+            LoginButton.Click += LoginButton_Click;
             // 
-            // PasswordTextBox
+            // LoginPasswordTextBox
             // 
-            this.PasswordTextBox.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.PasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PasswordTextBox.Location = new System.Drawing.Point(125, 255);
-            this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(350, 34);
-            this.PasswordTextBox.TabIndex = 3;
-            this.PasswordTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            LoginPasswordTextBox.BackColor = Color.AntiqueWhite;
+            LoginPasswordTextBox.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            LoginPasswordTextBox.Location = new Point(125, 255);
+            LoginPasswordTextBox.Name = "LoginPasswordTextBox";
+            LoginPasswordTextBox.PasswordChar = '☆';
+            LoginPasswordTextBox.PlaceholderText = "Пароль";
+            LoginPasswordTextBox.Size = new Size(350, 34);
+            LoginPasswordTextBox.TabIndex = 2;
+            LoginPasswordTextBox.TextAlign = HorizontalAlignment.Center;
             // 
-            // LoginTextBox
+            // LoginEmailTextBox
             // 
-            this.LoginTextBox.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.LoginTextBox.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LoginTextBox.Location = new System.Drawing.Point(125, 200);
-            this.LoginTextBox.Name = "LoginTextBox";
-            this.LoginTextBox.Size = new System.Drawing.Size(350, 34);
-            this.LoginTextBox.TabIndex = 0;
-            this.LoginTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            LoginEmailTextBox.BackColor = Color.AntiqueWhite;
+            LoginEmailTextBox.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            LoginEmailTextBox.Location = new Point(125, 200);
+            LoginEmailTextBox.Name = "LoginEmailTextBox";
+            LoginEmailTextBox.PlaceholderText = "Логин";
+            LoginEmailTextBox.Size = new Size(350, 34);
+            LoginEmailTextBox.TabIndex = 1;
+            LoginEmailTextBox.TextAlign = HorizontalAlignment.Center;
+            // 
+            // RegisterPanel
+            // 
+            RegisterPanel.BackColor = Color.Transparent;
+            RegisterPanel.Controls.Add(RegisterRedirectTologinLabel);
+            RegisterPanel.Controls.Add(RegisterPasswordConfirmTextBox);
+            RegisterPanel.Controls.Add(RegisterNameTextBox);
+            RegisterPanel.Controls.Add(RegisterErrorMsgLabel);
+            RegisterPanel.Controls.Add(RegisterBtn);
+            RegisterPanel.Controls.Add(RegisterPasswordTextBox);
+            RegisterPanel.Controls.Add(label4);
+            RegisterPanel.Controls.Add(RegisterEmailTextBox);
+            RegisterPanel.Location = new Point(15, 70);
+            RegisterPanel.Name = "RegisterPanel";
+            RegisterPanel.Size = new Size(600, 450);
+            RegisterPanel.TabIndex = 4;
+            RegisterPanel.Visible = false;
+            // 
+            // RegisterRedirectTologinLabel
+            // 
+            RegisterRedirectTologinLabel.BackColor = Color.Transparent;
+            RegisterRedirectTologinLabel.Cursor = Cursors.Hand;
+            RegisterRedirectTologinLabel.Font = new Font("Arial Black", 10F, FontStyle.Underline, GraphicsUnit.Point);
+            RegisterRedirectTologinLabel.ForeColor = Color.PowderBlue;
+            RegisterRedirectTologinLabel.Location = new Point(175, 430);
+            RegisterRedirectTologinLabel.Name = "RegisterRedirectTologinLabel";
+            RegisterRedirectTologinLabel.Size = new Size(250, 20);
+            RegisterRedirectTologinLabel.TabIndex = 8;
+            RegisterRedirectTologinLabel.Text = "Уже есть аккаунт? Войти";
+            RegisterRedirectTologinLabel.TextAlign = ContentAlignment.MiddleCenter;
+            RegisterRedirectTologinLabel.UseCompatibleTextRendering = true;
+            RegisterRedirectTologinLabel.Click += RegisterRedirectTologinLabel_Click;
+            // 
+            // RegisterPasswordConfirmTextBox
+            // 
+            RegisterPasswordConfirmTextBox.BackColor = Color.AntiqueWhite;
+            RegisterPasswordConfirmTextBox.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            RegisterPasswordConfirmTextBox.Location = new Point(125, 261);
+            RegisterPasswordConfirmTextBox.Name = "RegisterPasswordConfirmTextBox";
+            RegisterPasswordConfirmTextBox.PasswordChar = '☆';
+            RegisterPasswordConfirmTextBox.PlaceholderText = "Повтор пароля";
+            RegisterPasswordConfirmTextBox.Size = new Size(350, 34);
+            RegisterPasswordConfirmTextBox.TabIndex = 4;
+            RegisterPasswordConfirmTextBox.TextAlign = HorizontalAlignment.Center;
+            // 
+            // RegisterNameTextBox
+            // 
+            RegisterNameTextBox.BackColor = Color.AntiqueWhite;
+            RegisterNameTextBox.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            RegisterNameTextBox.Location = new Point(125, 111);
+            RegisterNameTextBox.Name = "RegisterNameTextBox";
+            RegisterNameTextBox.PlaceholderText = "Имя";
+            RegisterNameTextBox.Size = new Size(350, 34);
+            RegisterNameTextBox.TabIndex = 1;
+            RegisterNameTextBox.TextAlign = HorizontalAlignment.Center;
+            // 
+            // RegisterErrorMsgLabel
+            // 
+            RegisterErrorMsgLabel.BackColor = Color.Transparent;
+            RegisterErrorMsgLabel.Font = new Font("Arial Black", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            RegisterErrorMsgLabel.ForeColor = Color.Red;
+            RegisterErrorMsgLabel.Location = new Point(50, 395);
+            RegisterErrorMsgLabel.Name = "RegisterErrorMsgLabel";
+            RegisterErrorMsgLabel.Size = new Size(500, 40);
+            RegisterErrorMsgLabel.TabIndex = 5;
+            RegisterErrorMsgLabel.Tag = "ErrorMsgLabel";
+            RegisterErrorMsgLabel.Text = "ErrorMsgLabel";
+            RegisterErrorMsgLabel.TextAlign = ContentAlignment.MiddleCenter;
+            RegisterErrorMsgLabel.UseCompatibleTextRendering = true;
+            // 
+            // RegisterBtn
+            // 
+            RegisterBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            RegisterBtn.BackColor = Color.Transparent;
+            RegisterBtn.BackgroundImageLayout = ImageLayout.Zoom;
+            RegisterBtn.Cursor = Cursors.Hand;
+            RegisterBtn.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            RegisterBtn.Location = new Point(200, 340);
+            RegisterBtn.Name = "RegisterBtn";
+            RegisterBtn.Size = new Size(200, 50);
+            RegisterBtn.TabIndex = 5;
+            RegisterBtn.TabStop = false;
+            RegisterBtn.Text = "Регнем!";
+            RegisterBtn.UseVisualStyleBackColor = false;
+            RegisterBtn.Click += RegisterBtn_Click;
+            // 
+            // RegisterPasswordTextBox
+            // 
+            RegisterPasswordTextBox.BackColor = Color.AntiqueWhite;
+            RegisterPasswordTextBox.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            RegisterPasswordTextBox.Location = new Point(125, 211);
+            RegisterPasswordTextBox.Name = "RegisterPasswordTextBox";
+            RegisterPasswordTextBox.PasswordChar = '☆';
+            RegisterPasswordTextBox.PlaceholderText = "Пароль";
+            RegisterPasswordTextBox.Size = new Size(350, 34);
+            RegisterPasswordTextBox.TabIndex = 3;
+            RegisterPasswordTextBox.TextAlign = HorizontalAlignment.Center;
+            // 
+            // RegisterEmailTextBox
+            // 
+            RegisterEmailTextBox.BackColor = Color.AntiqueWhite;
+            RegisterEmailTextBox.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            RegisterEmailTextBox.Location = new Point(125, 161);
+            RegisterEmailTextBox.Name = "RegisterEmailTextBox";
+            RegisterEmailTextBox.PlaceholderText = "Адрес электронной почты";
+            RegisterEmailTextBox.Size = new Size(350, 34);
+            RegisterEmailTextBox.TabIndex = 2;
+            RegisterEmailTextBox.TextAlign = HorizontalAlignment.Center;
+            // 
+            // MainPanel
+            // 
+            MainPanel.BackColor = Color.Transparent;
+            MainPanel.Controls.Add(PlayBtn);
+            MainPanel.Controls.Add(UserNameLabel);
+            MainPanel.Controls.Add(LogOutBtn);
+            MainPanel.Controls.Add(label7);
+            MainPanel.Location = new Point(15, 70);
+            MainPanel.Name = "MainPanel";
+            MainPanel.Size = new Size(600, 450);
+            MainPanel.TabIndex = 9;
+            MainPanel.Visible = false;
+            // 
+            // PlayBtn
+            // 
+            PlayBtn.Font = new Font("Segoe UI", 22F, FontStyle.Bold, GraphicsUnit.Point);
+            PlayBtn.Location = new Point(397, 385);
+            PlayBtn.Name = "PlayBtn";
+            PlayBtn.Size = new Size(200, 60);
+            PlayBtn.TabIndex = 4;
+            PlayBtn.Text = "К игре";
+            PlayBtn.UseVisualStyleBackColor = true;
+            PlayBtn.Click += PlayBtn_Click;
+            // 
+            // LogOutBtn
+            // 
+            LogOutBtn.BackgroundImage = Properties.Resources.logout;
+            LogOutBtn.BackgroundImageLayout = ImageLayout.Zoom;
+            LogOutBtn.Cursor = Cursors.Hand;
+            LogOutBtn.Location = new Point(0, 387);
+            LogOutBtn.Name = "LogOutBtn";
+            LogOutBtn.Size = new Size(60, 60);
+            LogOutBtn.TabIndex = 2;
+            LogOutBtn.TabStop = false;
+            LogOutBtn.Click += LogOutBtn_Click;
             // 
             // SideImage
             // 
-            this.SideImage.BackColor = System.Drawing.Color.Transparent;
-            this.SideImage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SideImage.BackgroundImage")));
-            this.SideImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.SideImage.Location = new System.Drawing.Point(700, 0);
-            this.SideImage.Name = "SideImage";
-            this.SideImage.Size = new System.Drawing.Size(300, 540);
-            this.SideImage.TabIndex = 2;
+            SideImage.BackColor = Color.Transparent;
+            SideImage.BackgroundImage = Properties.Resources.Maksim;
+            SideImage.BackgroundImageLayout = ImageLayout.Zoom;
+            SideImage.Controls.Add(label3);
+            SideImage.Location = new Point(700, 0);
+            SideImage.Name = "SideImage";
+            SideImage.Size = new Size(300, 540);
+            SideImage.TabIndex = 2;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(111, 403);
+            label3.Name = "label3";
+            label3.Size = new Size(38, 15);
+            label3.TabIndex = 0;
+            label3.Text = "label3";
             // 
             // LoginFrame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(960, 540);
-            this.Controls.Add(this.SideImage);
-            this.Controls.Add(this.Header);
-            this.Controls.Add(this.RegisterPanel);
-            this.Controls.Add(this.LoginPanel);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LoginFrame";
-            this.Text = "LemonSky";
-            this.Header.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ExitButton)).EndInit();
-            this.LoginPanel.ResumeLayout(false);
-            this.LoginPanel.PerformLayout();
-            this.RegisterPanel.ResumeLayout(false);
-            this.RegisterPanel.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ButtonShadow;
+            BackgroundImage = Properties.Resources.BackgroundImage;
+            BackgroundImageLayout = ImageLayout.Zoom;
+            ClientSize = new Size(960, 540);
+            Controls.Add(SideImage);
+            Controls.Add(Header);
+            Controls.Add(LoginPanel);
+            Controls.Add(MainPanel);
+            Controls.Add(RegisterPanel);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "LoginFrame";
+            Text = "LemonSky";
+            Header.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)ExitButton).EndInit();
+            LoginPanel.ResumeLayout(false);
+            LoginPanel.PerformLayout();
+            RegisterPanel.ResumeLayout(false);
+            RegisterPanel.PerformLayout();
+            MainPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)LogOutBtn).EndInit();
+            SideImage.ResumeLayout(false);
+            SideImage.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -247,15 +436,26 @@
         private Panel Header;
         private PictureBox ExitButton;
         private Panel LoginPanel;
-        private TextBox LoginTextBox;
+        private TextBox LoginEmailTextBox;
         private Label label1;
         private Panel SideImage;
         private Label label2;
         private Button LoginButton;
-        private TextBox PasswordTextBox;
+        private TextBox LoginPasswordTextBox;
         private Panel RegisterPanel;
-        private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private Button RegisterBtn;
+        private TextBox RegisterPasswordTextBox;
+        private TextBox RegisterEmailTextBox;
+        private Label loginErrorMsgLabel;
+        private Label RegisterErrorMsgLabel;
+        private TextBox RegisterNameTextBox;
+        private TextBox RegisterPasswordConfirmTextBox;
+        private Label RegisterRedirectTologinLabel;
+        private Label label3;
+        private Label LoginRedirectToRegisterLabel;
+        private Panel MainPanel;
+        private PictureBox LogOutBtn;
+        private Label UserNameLabel;
+        private Button PlayBtn;
     }
 }
