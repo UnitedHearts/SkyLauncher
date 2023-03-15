@@ -1,11 +1,14 @@
 ﻿using Microsoft.VisualBasic.Logging;
 using SkyLauncher.Properties;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace SkyLauncher.Pages
 {
     public partial class LoginFrame : Form
     {
+        [DllImport("UnityPlayer")]
+        static extern int UnityMain(IntPtr hinstance, IntPtr hPrevInstance, [MarshalAs(UnmanagedType.LPTStr)] string lpCmdline, int nShowCmd);
         readonly PanelManager panelManager;
         public LoginFrame()
         {
@@ -177,7 +180,16 @@ namespace SkyLauncher.Pages
         }
         private void PlayBtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                var commandArgs = $"-mode host -login {AccountManager.Current.Email}";
 
+                UnityMain(Process.GetCurrentProcess().Handle, IntPtr.Zero, commandArgs, 1);
+            }
+            catch (Exception)
+            {
+                MainErrorMsgLabel.Text = "Не найдены файлы игры";
+            }
         }
     }
 }

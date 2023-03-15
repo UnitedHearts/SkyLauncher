@@ -50,6 +50,7 @@
             RegisterPasswordTextBox = new TextBox();
             RegisterEmailTextBox = new TextBox();
             MainPanel = new Panel();
+            MainErrorMsgLabel = new Label();
             PlayBtn = new Button();
             LogOutBtn = new PictureBox();
             SideImage = new Panel();
@@ -348,6 +349,7 @@
             // MainPanel
             // 
             MainPanel.BackColor = Color.Transparent;
+            MainPanel.Controls.Add(MainErrorMsgLabel);
             MainPanel.Controls.Add(PlayBtn);
             MainPanel.Controls.Add(UserNameLabel);
             MainPanel.Controls.Add(LogOutBtn);
@@ -357,6 +359,20 @@
             MainPanel.Size = new Size(600, 450);
             MainPanel.TabIndex = 9;
             MainPanel.Visible = false;
+            // 
+            // MainErrorMsgLabel
+            // 
+            MainErrorMsgLabel.BackColor = Color.Transparent;
+            MainErrorMsgLabel.Font = new Font("Arial Black", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            MainErrorMsgLabel.ForeColor = Color.Red;
+            MainErrorMsgLabel.Location = new Point(66, 395);
+            MainErrorMsgLabel.Name = "MainErrorMsgLabel";
+            MainErrorMsgLabel.Size = new Size(325, 40);
+            MainErrorMsgLabel.TabIndex = 6;
+            MainErrorMsgLabel.Tag = "ErrorMsgLabel";
+            MainErrorMsgLabel.Text = "ErrorMsgLabel";
+            MainErrorMsgLabel.TextAlign = ContentAlignment.MiddleCenter;
+            MainErrorMsgLabel.UseCompatibleTextRendering = true;
             // 
             // PlayBtn
             // 
@@ -457,5 +473,6 @@
         private PictureBox LogOutBtn;
         private Label UserNameLabel;
         private Button PlayBtn;
+        private Label MainErrorMsgLabel;
     }
 }
