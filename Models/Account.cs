@@ -1,3 +1,4 @@
+using SkyLauncher.Models;
 using System.Text.Json.Serialization;
 
 namespace SkyLauncher;
@@ -15,4 +16,9 @@ public class Account
     public bool EmailConfirmed { get; set; }
     [JsonPropertyName("active")]
     public bool Active { get; set; }
+
+    [JsonPropertyName("cash")]
+    public Cash Cash { get; set; }
+    [JsonPropertyName("statistic")]
+    public AccountStatistic Statistic { get; set; }
 }

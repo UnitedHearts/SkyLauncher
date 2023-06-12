@@ -73,6 +73,26 @@ namespace SkyLauncher.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dash_active {
+            get {
+                object obj = ResourceManager.GetObject("dash_active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dash_inactive {
+            get {
+                object obj = ResourceManager.GetObject("dash_inactive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exit_active {
             get {
                 object obj = ResourceManager.GetObject("exit_active", resourceCulture);
@@ -86,6 +106,16 @@ namespace SkyLauncher.Properties {
         internal static System.Drawing.Bitmap exit_inactive {
             get {
                 object obj = ResourceManager.GetObject("exit_inactive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gold_coin {
+            get {
+                object obj = ResourceManager.GetObject("gold_coin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +146,26 @@ namespace SkyLauncher.Properties {
         internal static System.Drawing.Bitmap Maksim {
             get {
                 object obj = ResourceManager.GetObject("Maksim", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap start_game_active {
+            get {
+                object obj = ResourceManager.GetObject("start_game_active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap start_game_inactive {
+            get {
+                object obj = ResourceManager.GetObject("start_game_inactive", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

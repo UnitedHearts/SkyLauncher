@@ -121,11 +121,20 @@
   <data name="BackgroundImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\backgroundimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dash_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\dash-active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dash_inactive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\dash-inactive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="exit_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit-active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exit_inactive" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit-inactive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gold_coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\gold-coin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logout_step_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\logout-step-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -135,5 +144,11 @@
   </data>
   <data name="Maksim" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\maksim.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="start_game_active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\start-game-active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="start_game_inactive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\start-game-inactive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

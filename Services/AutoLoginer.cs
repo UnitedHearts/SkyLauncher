@@ -12,7 +12,7 @@ public static class AutoLoginer
     static AutoLoginer()
     {
         var path = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
-        _folder = path + "/LemonApi/";
+        _folder = path + "/UnitedHearts/";
         _fileName = "User.json";
     }
 

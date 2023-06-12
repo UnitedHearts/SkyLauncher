@@ -1,48 +1,40 @@
 ﻿namespace SkyLauncher;
 public class PanelManager
 {
-    
-    public PanelManager()
-    {
-        Panels = new List<Panel>();
-    }
-    public PanelManager(IEnumerable<Panel> panels)
-    {
-        Panels = panels.ToList();
-        ConfigurePanelsErrorMsg(5000);
-    }
+    Panel _activePanel;
 
-    /// <summary>
-    /// Список панелей, активная из которых должна быть только 1
-    /// </summary>
-    public List<Panel> Panels { get; set; }
     /// <summary>
     /// Активная отображаемая на данный момент панель
     /// </summary>
     public Panel ActivePanel
     {
-        get => Panels.FirstOrDefault(e => e.Visible);
-        set
-        {
-            DisableAllPanels();
-            Panels.FirstOrDefault(e => e == value).Visible = true;
-        }
+        get => _activePanel;
+        set => ChangePanel(value);
+    }
+
+    public PanelManager(IEnumerable<Panel> panels)
+    {
+        if (panels.Count() == 0) throw new Exception("Нет панелей для рендера");
+        _activePanel = panels.ElementAt(0);
+        ConfigurePanelsErrorMsg(panels, 5000);
     }
 
     /// <summary>
-    /// Скрывает все панели
+    /// Активирует указанную панель
     /// </summary>
-    void DisableAllPanels()
+    void ChangePanel(Panel target)
     {
-        Panels.ForEach(panel => panel.Visible = false);
+        _activePanel.Visible = false;
+        _activePanel = target;
+        _activePanel.Visible = true;
     }
 
     /// <summary>
     /// Устанавливает эвент очистки поля с сообщением ошибки
     /// </summary>
-    void ConfigurePanelsErrorMsg(int lifeTime)
+    void ConfigurePanelsErrorMsg(IEnumerable<Panel> panels, int lifeTime)
     {
-        Panels.ForEach(e =>
+        panels.ToList().ForEach(e =>
         {
             e.Controls
             .Cast<Control>()
@@ -62,33 +54,5 @@ public class PanelManager
                 };
             });
         });
-    }
-
-    /// <summary>
-    /// Устанавливает список рабочих панелей
-    /// </summary>
-    /// <param name="panels"></param>
-    public void SetPanels(IEnumerable<Panel> panels)
-    {
-        Panels = panels.ToList();
-        ConfigurePanelsErrorMsg(5000);
-    }
-    /// <summary>
-    /// Добавляет панель
-    /// </summary>
-    /// <param name="panel"></param>
-    public void AddPanel(Panel panel)
-    {
-        if (!Panels.Contains(panel))
-            Panels.Add(panel);
-    }
-    /// <summary>
-    /// Удаляет панель
-    /// </summary>
-    /// <param name="panel"></param>
-    public void RemovePanel(Panel panel)
-    {
-        if (Panels.Contains(panel))
-            Panels.Remove(panel);
     }
 }
